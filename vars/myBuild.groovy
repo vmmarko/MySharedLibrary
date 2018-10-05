@@ -15,7 +15,6 @@ node {
 
 	}
 }
-}
 
 //package builds
 
