@@ -1,8 +1,8 @@
 #!/usr/bin/env groovy
 
 node {
-	stage ('Testing') {
-		echo "Testing !"
+	stage ('Test') {
+		echo "Test !"
 
 		def mvnHome
 
