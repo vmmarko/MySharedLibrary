@@ -1,4 +1,5 @@
 @Library('MySharedLibrary@master')_
+import common.*
 
 node {
 
@@ -67,6 +68,7 @@ node {
 		}
 	}
 	
+}
 
 
 //String buildSettingsJson = 'resources/stages/execution/parameterized/Build_Settings.json'
