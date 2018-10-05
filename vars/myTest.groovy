@@ -9,6 +9,7 @@ def call() {
 		sh '$MAVEN_HOME/mvn surefire-report:report'
 	} else {
 		bat (/call mvn surefire-report:report/)
+	}
 
 }
 
