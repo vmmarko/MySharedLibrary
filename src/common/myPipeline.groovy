@@ -6,7 +6,9 @@ class myPipeline {
 
 }
 
-def build() {
+/*
+ * def build() {
+
 	mvn clean deploy -U
   }
   def test(name) {
@@ -19,3 +21,5 @@ def build() {
 	  ParameterKey=Env,ParameterValue=${env}
 	...(rest of the params go here)
   }
+
+  */

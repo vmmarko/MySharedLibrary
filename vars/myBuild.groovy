@@ -6,11 +6,25 @@
 	
 //}
 
-def call(String name = 'Vladislav') {
-	echo "Hello, ${name}."
+def call() {
+	echo "Build !"
 	
 	def mvnHome
 	
+	stage('Build') {
+		// Run the maven build
+		if (isUnix()) {
+		   sh '$MAVEN_HOME/mvn package'
+		} else {
+		   bat(/call mvn package/)
+		}
+	 }
+		 
+}
+
+
+/*
+ 
 	git 'https://github.com/vmmarko/Azure-training.git'
 	
 	if (isUnix()){
@@ -35,12 +49,11 @@ def call(String name = 'Vladislav') {
 		 sh '$MAVEN_HOME/mvn tomcat7:redeploy'
 	 } else {
 		 bat (/call mvn tomcat7:redeploy/)
-	 }
-	 
-}
+	 } 
 
-
-/*
+ 
+ 
+ 
 def preparation(){
 	// Get some code from a GitHub repository
 	git 'https://github.com/vmmarko/Azure-training.git'
