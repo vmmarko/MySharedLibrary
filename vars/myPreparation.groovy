@@ -1,5 +1,7 @@
 #!/usr/bin/env groovy
+import common.*
 
+node {
 def call() {
 	echo "Preparation my !"
 	
