@@ -11,14 +11,12 @@ def call() {
 	
 	def mvnHome
 	
-	stage('Build') {
-		// Run the maven build
-		if (isUnix()) {
-		   sh '$MAVEN_HOME/mvn package'
-		} else {
-		   bat(/call mvn package/)
-		}
-	 }
+	// Run the maven build
+	if (isUnix()) {
+		sh '$MAVEN_HOME/mvn package'
+	} else {
+		bat(/call mvn package/)
+	}
 		 
 }
 

@@ -5,12 +5,10 @@ def call() {
 	
 	def mvnHome
 	
-	stage('Tomcat Deploy') {
-		if (isUnix()){
-			sh '$MAVEN_HOME/mvn tomcat7:redeploy'
-		} else {
-			bat (/call mvn tomcat7:redeploy/)
-		}
+	if (isUnix()){
+		sh '$MAVEN_HOME/mvn tomcat7:redeploy'
+	} else {
+		bat (/call mvn tomcat7:redeploy/)
 	}
 }
 
