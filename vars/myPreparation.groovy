@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 
 def call() {
-	echo "Preparation !"
+	echo "Preparation my !"
 	
 	def mvnHome
 	
