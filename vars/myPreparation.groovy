@@ -11,3 +11,4 @@ def call() {
 	git 'https://github.com/vmmarko/Azure-training.git'
 		
 }
+}
