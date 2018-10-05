@@ -1,4 +1,5 @@
 #!/usr/bin/env groovy
+import common.*
 
 node {
 	stage ('Test') {

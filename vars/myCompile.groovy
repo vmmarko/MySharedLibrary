@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-//import common.*
+import common.*
 
 node {
 	stage ('Compile') {
