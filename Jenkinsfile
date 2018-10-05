@@ -10,6 +10,7 @@ node {
 	
 	stage('Preparation') {
 		echo "Preparation !"
+		checkout scm
 	
   		def mvnHome
 	
