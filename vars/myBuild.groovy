@@ -1,11 +1,28 @@
 #!/usr/bin/env groovy
+import common.*
+
+node {
+	stage ('Build') {
+		echo "Build !"
+		
+		def mvnHome
+		// Run the maven build
+		if (isUnix()) {
+			sh '$MAVEN_HOME/mvn package'
+		} else {
+			bat(/call mvn package/)
+		}
+
+	}
+}
+}
 
 //package builds
 
 //class myBuild {
 	
 //}
-
+/*
 def call() {
 	echo "Build !"
 	
@@ -21,7 +38,7 @@ def call() {
 }
 
 
-/*
+
  
 	git 'https://github.com/vmmarko/Azure-training.git'
 	
