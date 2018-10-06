@@ -2,7 +2,7 @@
 import common.*
 
 def myPreparation(){
-	node {
+	//node {
 		stage ('Preparation') {
 			echo "Preparation my !"
 
@@ -19,5 +19,5 @@ def myPreparation(){
 			 }
 			 */	
 		}
-	}
+	//}
 }
