@@ -8,7 +8,7 @@ def call(String myGit){
 		//stage ('Preparation') {
 			echo "Preparation my ! - ${myGit}"
 
-			//def mvnHome
+			def mvnHome
 
 			// Get some code from a GitHub repository
 			git ${myGit}
