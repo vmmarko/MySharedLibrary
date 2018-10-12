@@ -8,11 +8,10 @@ def call {
 		def mvnHome
 		// Run the maven build
 		if (isUnix()) {
-			sh '$MAVEN_HOME/mvn package'
+			sh '$MAVEN_HOME/mvn clean package'
 		} else {
 			bat(/call mvn package/)
 		}
-
 }
 
 //package builds
