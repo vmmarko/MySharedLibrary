@@ -11,7 +11,7 @@ def call(String myGit){
 			//def mvnHome
 
 			// Get some code from a GitHub repository
-			git ${myGit}
+			git "${myGit}"
 			//git 'https://github.com/vmmarko/Azure-training.git'
 
 						/*
