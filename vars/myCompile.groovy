@@ -1,8 +1,7 @@
 #!/usr/bin/env groovy
 import common.*
 
-node {
-	stage ('Compile') {
+def call {
 		echo "Compile !"
 
 		def mvnHome
