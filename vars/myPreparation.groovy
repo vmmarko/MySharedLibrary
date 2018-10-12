@@ -6,7 +6,7 @@ import hudson.plugins.git.GitSCM
 def call(String myGit){
 	//node {
 		//stage ('Preparation') {
-			printLine("Preparation my !")
+			echo "Preparation my !"
 
 			def mvnHome
 
