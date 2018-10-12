@@ -2,13 +2,13 @@
 import common.*
 
 
-def call {
-		echo "Build !"
+def call(String stage) {
+		echo "$stage"
 		
 		def mvnHome
 		// Run the maven build
 		if (isUnix()) {
-			sh '$MAVEN_HOME/mvn clean package'
+			sh '/opt/maven/bin/mvn package'
 		} else {
 			bat(/call mvn package/)
 		}
@@ -20,7 +20,7 @@ def call {
 	
 //}
 /*
-
+bat(/call mvn clean package/)
 		
 		
 def call() {
