@@ -8,7 +8,7 @@ def call(String stage) {
 		def mvnHome
 		// Run the maven build
 		if (isUnix()) {
-			sh '/opt/maven/bin/mvn package'
+			sh 'mvn package'
 		} else {
 			bat(/call mvn package/)
 		}
