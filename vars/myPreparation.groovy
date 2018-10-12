@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
-import common.*
-import hudson.plugins.git.GitSCM
+//import common.*
+//import hudson.plugins.git.GitSCM
 
 
 def call(String myGit){
@@ -8,7 +8,7 @@ def call(String myGit){
 		//stage ('Preparation') {
 			echo "Preparation my ! - ${myGit}"
 
-			def mvnHome
+			//def mvnHome
 
 			// Get some code from a GitHub repository
 			git ${myGit}
