@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 import common.*
 
-def call {
+def call(body) {
 		echo "Compile !"
 
 		def mvnHome
@@ -13,7 +13,6 @@ def call {
 			bat(/call mvn clean compile/)
 			echo "Compile Win"
 		}
-	}
 	echo "Compile end"
 }
 
