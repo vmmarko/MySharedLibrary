@@ -12,6 +12,12 @@ def call(String myGit){
 
 			// Get some code from a GitHub repository
 			git "${myGit}"
+			
+			if (isUnix()){
+				sh '$MAVEN_HOME/mvn compile'
+			 } else {
+				 bat(/call mvn clean compile/)
+			 }
 			//git 'https://github.com/vmmarko/Azure-training.git'
 
 						/*
