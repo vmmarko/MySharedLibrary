@@ -1,16 +1,20 @@
 #!/usr/bin/env groovy
 import common.*
+import hudson.plugins.git.GitSCM
 
-def myPreparation(){
-	node {
+
+def call(String myGit){
+	//node {
 		stage ('Preparation') {
 			echo "Preparation my !"
 
 			def mvnHome
 
 			// Get some code from a GitHub repository
-			git 'https://github.com/vmmarko/Azure-training.git'
-			/*
+			git ${myGit}
+			//git 'https://github.com/vmmarko/Azure-training.git'
+
+						/*
 			 withMaven(
 			 maven: 'M3',
 			 mavenSettingsConfig: 'my-maven-settings',
@@ -19,5 +23,13 @@ def myPreparation(){
 			 }
 			 */	
 		}
-	}
+	//}
+}
+
+/*
+
+import hudson.plugins.git.GitSCM
+
+def call(String url) {
+	git "${url.getText('utf-8')}"
 }
