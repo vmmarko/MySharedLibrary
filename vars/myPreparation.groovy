@@ -5,7 +5,7 @@ import hudson.plugins.git.GitSCM
 
 def call(String myGit){
 	//node {
-		stage ('Preparation') {
+		//stage ('Preparation') {
 			echo "Preparation my !"
 
 			def mvnHome
@@ -22,7 +22,7 @@ def call(String myGit){
 			 {  sh "mvn clean install" }
 			 }
 			 */	
-		}
+		//}
 	//}
 }
 
