@@ -1,8 +1,7 @@
 #!/usr/bin/env groovy
 import common.*
 
-//node {
-//	stage ('Build') {
+
 def call {
 		echo "Build !"
 		
@@ -14,7 +13,6 @@ def call {
 			bat(/call mvn package/)
 		}
 
-//	}
 }
 
 //package builds
