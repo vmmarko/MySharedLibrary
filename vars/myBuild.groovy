@@ -3,7 +3,7 @@ import common.*
 
 //node {
 //	stage ('Build') {
-def call{
+def call {
 		echo "Build !"
 		
 		def mvnHome
