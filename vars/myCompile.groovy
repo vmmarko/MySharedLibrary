@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 import common.*
 
-def call(body) {
+def call() {
 		echo "Compile !"
 
 		def mvnHome
