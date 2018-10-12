@@ -1,18 +1,14 @@
 #!/usr/bin/env groovy
 import common.*
 
-node {
-	stage ('Deploy') {
-		echo "Deploy !"
+def call(String stage) {
+	echo "$stage"
 
-		def mvnHome
+	def mvnHome
 
 		if (isUnix()){
-			sh '$MAVEN_HOME/mvn tomcat7:redeploy'
+			sh 'mvn tomcat7:redeploy'
 		} else {
 			bat (/call mvn tomcat7:redeploy/)
 		}
-	}
 }
-
-
